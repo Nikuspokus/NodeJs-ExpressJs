@@ -13,7 +13,7 @@
     <h3 class="ui dividing header">Commentaires</h3>
     <% for (message of messages) {%>
         <div class="comment">
-            <a class="avatar">
+            <a class="avatar" href="/message/<%= message.id %>">
                 <img src="https://randomuser.me/api/portraits/lego/7.jpg">
             </a>
             <div class="metadata">
