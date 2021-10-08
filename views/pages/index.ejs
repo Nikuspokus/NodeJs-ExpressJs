@@ -8,4 +8,24 @@
         <i class="icon edit"></i>Envoyer
     </button>
 </form>
+
+<div class="ui comments">
+    <h3 class="ui dividing header">Commentaires</h3>
+    <% for (message of messages) {%>
+        <div class="comment">
+            <a class="avatar">
+                <img src="https://randomuser.me/api/portraits/lego/7.jpg">
+            </a>
+            <div class="metadata">
+                <div class="date">
+                    <%= message.created_at.fromNow() %>
+                </div>
+            </div>
+            <div class="content">
+                <div class="test"><%= message.content %></div>
+            </div>
+        </div>
+    <% } %>
+</div>
+
 <%- include ('footer.ejs') %>
